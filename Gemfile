@@ -25,8 +25,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 #
-# get better error messages
-gem 'better_errors', '~> 2.9', '>= 2.9.1'
+
 
 #Bootstrap styling css
 gem 'bootstrap', '~> 5.0', '>= 5.0.1'
@@ -54,10 +53,12 @@ group :development do
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
   # Guard is a command line tool to easily handle events on file system modifications
-  gem 'guard', '~> 2.18'
+  gem 'guard', '~> 2.18', require: false
 
   #Guard::LiveReload automatically reloads your browser when 'view' files are modified.
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+  # get better error messages
+  gem 'better_errors', '~> 2.9', '>= 2.9.1'
 end
 
 group :test do
