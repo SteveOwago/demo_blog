@@ -1,9 +1,25 @@
- <div class="container">
-    <div class="row bg-success">
-      <div class="col-sm-12 mt-5 text-center">
+ <div class="container  bg-success">
+    <div class="row">
+      <div class="col-sm-8 offset-2 mt-5">
         <h1>
-          <small class="lead"><b>Blog Index Page</b></small>
+          <small class="lead"><b>Blogs Index Page</b></small>
         </h1>
+        <div class="panel panel-default">
+          <div class="panel-heading"></div>
+          <div class="panel-body">
+            <% @posts.each do |post| %>
+              <div class="card mt-2">
+                <div class="card-title text-center bg-info">
+                  <%= post.title %>
+                </div>
+                <div class="card-body">
+                  <%= post.body %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
