@@ -1,16 +1,15 @@
- <div class="container  bg-success">
+<% content_for :page_title, "Basic Blog Application" %>
+<% content_for :sub_title, "Welcome to Basic Blog Application Build On Ruby on Rails." %>
+<div class="container  bg-success">
     <div class="row">
       <div class="col-sm-8 offset-2 mt-5">
-        <h1>
-          <small class="lead"><b>Blogs Index Page</b></small>
-        </h1>
         <div class="panel panel-default">
-          <div class="panel-heading"></div>
+          <div class="panel-heading">Blog Posts</div>
           <div class="panel-body">
             <% @posts.each do |post| %>
               <div class="card mt-2">
                 <div class="card-title text-center bg-info">
-                  <%= post.title %>
+                  <%= link_to post.title, post %>
                 </div>
                 <div class="card-body">
                   <%= post.body %>

@@ -1,13 +1,14 @@
+<% content_for :page_title, "Create New Blog Post on Ruby On Rails" %>
 <div class="container">
   <div class="row">
     <div class="col-sm-6 offset-3">
       <div class="panel panel-default mt-5">
-        <div class="panel-title">Create New Post</div>
+        <div class="panel-title">New Post</div>
         <div class="panel-body">
           <div class="form-group">
             <%= simple_form_for @post do |f| %>
               <%= f.input :title, label: 'Enter Post Title', class:'form-control', error: 'Title is mandatory, please specify one' %>
-              <%= f.input :body, label: 'Enter Post Text',input_html: {type:'textarea'},class:'form-control', rows: '15', placeholder: 'Start Typing Here', error: 'Title is required, please specify one'  %>
+              <%= f.input :body, label: 'Enter Post Text',input_html: {type:'textarea', :rows => 10},class:'form-control', placeholder: 'Start Typing Here...', error: 'Title is required, please specify one'  %>
               <%= f.button :submit, 'Submit Post',class: 'btn btn-success mt-4' %>
             <% end %>
           </div>
